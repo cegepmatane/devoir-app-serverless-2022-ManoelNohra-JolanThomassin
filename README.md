@@ -1,1 +1,1 @@
-# Manoël Nohra
+# Manoël Nohra et Jolan Thomassin
