@@ -18,7 +18,7 @@ exports.handler = async (event) => {
     headers: {
       "Access-Control-Allow-Origin" : "*"
     },
-    body : "Pas de cadeau reçu",
+    body : "Pas de anime reçu",
   };
   
   if (anime == null) {
