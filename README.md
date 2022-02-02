@@ -1,14 +1,14 @@
 # Manoël Nohra et Jolan Thomassin
 
 # Api Gateaway 
-# Chercher par id
+## Chercher par id
 
 https://lzkppvwgh4.execute-api.us-east-1.amazonaws.com/default/chercher-par-id?id=
 
-# Ajouter
+## Ajouter
 
 https://5lwcfrses5.execute-api.us-east-1.amazonaws.com/default/ajouter
 
-# Lister
+## Lister
 
 https://pji4gfywn9.execute-api.us-east-1.amazonaws.com/default/lister
