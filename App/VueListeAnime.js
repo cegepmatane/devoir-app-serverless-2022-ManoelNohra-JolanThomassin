@@ -1,28 +1,28 @@
 ﻿class VueListeAnime{
   constructor(){
-    this.html = document.getElementById("html-vue-liste-cadeau").innerHTML;
-    this.listeCadeauDonnee = null;
+    this.html = document.getElementById("html-vue-liste-anime").innerHTML;
+    this.listeAnimeDonnee = null;
   }
 
-  initialiserListeCadeau(listeCadeauDonnee){
-    this.listeCadeauDonnee = listeCadeauDonnee;
+  initialiserListeCadeau(listeAnimeDonnee){
+    this.listeAnimeDonnee = listeAnimeDonnee;
   }
 
   afficher(){
     document.getElementsByTagName("body")[0].innerHTML = this.html;
 
-    let listeCadeau = document.getElementById("liste-cadeau");
-    const listeCadeauItemHTML = listeCadeau.innerHTML;
-    let listeCadeauHTMLRemplacement = "";
+    let listeCadeau = document.getElementById("liste-anime");
+    const listeAnimeItemHTML = listeAnime.innerHTML;
+    let listeAnimeHTMLRemplacement = "";
 
-    for(var numeroCadeau in this.listeCadeauDonnee){
-      let listeCadeauItemHTMLRemplacement = listeCadeauItemHTML;
-      listeCadeauItemHTMLRemplacement = listeCadeauItemHTMLRemplacement.replace("{Cadeau.id}",this.listeCadeauDonnee[numeroCadeau].id);
-      listeCadeauItemHTMLRemplacement = listeCadeauItemHTMLRemplacement.replace("{Cadeau.nom}",this.listeCadeauDonnee[numeroCadeau].nom);
-      listeCadeauHTMLRemplacement += listeCadeauItemHTMLRemplacement;
+    for(var numeroAnime in this.listeAnimeDonnee){
+      let listeAnimeItemHTMLRemplacement = listeAnimeItemHTML;
+      listeAnimeItemHTMLRemplacement = listeAnimeItemHTMLRemplacement.replace("{Anime.id}",this.listeAnimeDonnee[numeroAnime].id);
+      listeAnimeItemHTMLRemplacement = listeAnimeItemHTMLRemplacement.replace("{Anime.titre}",this.listeAnimeDonnee[numeroAnime].titre);
+      listeAnimeHTMLRemplacement += listeAnimeItemHTMLRemplacement;
     }
 
-    listeCadeau.innerHTML = listeCadeauHTMLRemplacement;
+    listeAnime.innerHTML = listeAnimeHTMLRemplacement;
   }
 
 }
