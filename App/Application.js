@@ -1,4 +1,4 @@
-﻿class Application {
+﻿﻿class Application {
   constructor(window, vueListeAnime, vueAnime, vueAjouterAnime, AnimeDAO){
 
     this.window = window;
@@ -26,13 +26,13 @@
 
       this.AnimeDAO.lister((listeAnime) => this.afficherNouvelleListeAnime(listeAnime));
 
-    }else if(hash.match(/^#ajouter-Anime/)){
+    }else if(hash.match(/^#ajouter-anime/)){
 
       this.vueAjouterAnime.afficher();
 
     }else{
 
-      let navigation = hash.match(/^#Anime\/([0-9]+)/);
+      let navigation = hash.match(/^#anime\/([0-9]+)/);
       let idAnime = navigation[1];
 
       this.AnimeDAO.chercher(idAnime, (anime) => this.afficherNouveauAnime(anime));
@@ -62,4 +62,3 @@
 }
 
 new Application(window, new VueListeAnime(), new VueAnime(), new VueAjouterAnime(), new AnimeDAO());
-

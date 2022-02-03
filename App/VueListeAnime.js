@@ -4,14 +4,14 @@
     this.listeAnimeDonnee = null;
   }
 
-  initialiserListeCadeau(listeAnimeDonnee){
+  initialiserListeAnime(listeAnimeDonnee){
     this.listeAnimeDonnee = listeAnimeDonnee;
   }
 
   afficher(){
     document.getElementsByTagName("body")[0].innerHTML = this.html;
 
-    let listeCadeau = document.getElementById("liste-anime");
+    let listeAnime = document.getElementById("liste-anime");
     const listeAnimeItemHTML = listeAnime.innerHTML;
     let listeAnimeHTMLRemplacement = "";
 

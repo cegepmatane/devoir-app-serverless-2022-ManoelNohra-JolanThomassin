@@ -17,46 +17,40 @@
   <script type="plain/text" id="html-vue-anime">
   <div class="page">
     <h1>Anime</h1>
-    <span>Titre</span>
-    <p id="anime-titre"></p>
-    <span>Année</span>
-    <p id="anime-annee"></p>
-    <span>Genre</span>
-    <p id="anime-genre"></p>
-    <span>Id</span>
-    <p id="anime-id"></p>
-    <span>Studio</span>
-    <p id="anime-studio"></p>
-    <a href="#" class="action">Revenir à la liste</a>
+    <h2 id="anime-nom"></h2>
+    <span>Marque</span>
+    <p id="anime-marque"></p>
+    <span>Description</span>
+    <p id="anime-description"></p>
+    <a href="#" class="action">Revenir &agrave; la liste</a>
   </div>
   </script>
 
   <script type="plain/text" id="html-vue-ajouter-anime">
   <div class="page">
-    <h1>Ajouter un anime</h1>
+    <h1>Ajouter un anime de Noël</h1>
     <form id="formulaire-ajouter">
       <fieldset>
         <legend>Identification du anime</legend>
         <div>
-          <label for="anime-titre">Titre</label>
-          <input type="text" id="anime-titre"/>
+          <label for="anime-nom">Nom</label>
+          <input type="text" id="anime-nom"/>
         </div>
         <div>
-          <label for="anime-marque">Année</label>
-          <input type="text" id="anime-annee"/>
+          <label for="anime-marque">Marque</label>
+          <input type="text" id="anime-marque"/>
         </div>
+      </fieldset>
+      <fieldset>
+        <legend>D&eacute;tails sur le anime</legend>
         <div>
-          <label for="anime-marque">Genre</label>
-          <input type="text" id="anime-genre"/>
-        </div>
-        <div>
-          <label for="anime-marque">Studio</label>
-          <input type="text" id="anime-studio"/>
+          <label for="anime-description">Description</label>
+          <textarea id="anime-description"></textarea>
         </div>
       </fieldset>
       <input class="action" type="submit" id="enregistrer" value="Enregistrer"/>
     </form>
-    <a href="#" class="action">Annuler et revenir sur la liste</a>
+    <a href="#" class="action">Annuler et revenir &agrave; la liste</a>
   </div>
   </script>
 
@@ -64,7 +58,7 @@
   <div class="page">
     <h1> Liste d'animé </h1>
     <ul id="liste-anime">
-      <li><a href="#anime/{Anime.id}" class="liste-anime-item">{Anime.titre}</a></li>
+      <li><a href="#anime/{Anime.id}" class="liste-anime-item">{Anime.nom}</a></li>
     </ul>
     <a class="action" href="#ajouter-anime">Ajouter un animé</a>
   </div>
