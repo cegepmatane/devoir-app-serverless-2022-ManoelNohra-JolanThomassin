@@ -16,53 +16,62 @@
 
   <script type="plain/text" id="html-vue-anime">
   <div class="page">
-    <h1>Anime</h1>
-    <h2 id="anime-nom"></h2>
-    <span>Marque</span>
-    <p id="anime-marque"></p>
-    <span>Description</span>
-    <p id="anime-description"></p>
-    <a href="#" class="action">Revenir &agrave; la liste</a>
+    <h1 class="neonText">Anime</h1>
+    <h2 class="neonText">Titre</h2>
+    <p class="neonText" id="anime-titre"></p>
+    <h2 class="neonText">Année</h2>
+    <p class="neonText" id="anime-annee"></p>
+    <h2 class="neonText">Genre</h2>
+    <p class="neonText" id="anime-genre"></p>
+    <h2 class="neonText">Id</h2>
+    <p class="neonText" id="anime-id"></p>
+    <h2 class="neonText">Studio</h2>
+    <p class="neonText" id="anime-studio"></p>
+    <a class="neonText" href="#" class="action">Revenir à la liste</a>
   </div>
   </script>
 
   <script type="plain/text" id="html-vue-ajouter-anime">
   <div class="page">
-    <h1>Ajouter un anime de Noël</h1>
+    <h1 class="neonText">Ajouter un anime</h1>
     <form id="formulaire-ajouter">
       <fieldset>
-        <legend>Identification du anime</legend>
+        <legend class="neonText">Description du nouvel animé</legend>
         <div>
-          <label for="anime-nom">Nom</label>
-          <input type="text" id="anime-nom"/>
+          <label for="anime-titre" class="neonText">Titre</label>
+          <input type="text" id="anime-titre"/>
         </div>
         <div>
-          <label for="anime-marque">Marque</label>
-          <input type="text" id="anime-marque"/>
+          <label for="anime-marque" class="neonText">Année</label>
+          <input type="text" id="anime-annee"/>
         </div>
-      </fieldset>
-      <fieldset>
-        <legend>D&eacute;tails sur le anime</legend>
         <div>
-          <label for="anime-description">Description</label>
-          <textarea id="anime-description"></textarea>
+          <label for="anime-marque" class="neonText">Genre</label>
+          <input type="text" id="anime-genre"/>
+        </div>
+        <div>
+          <label for="anime-marque" class="neonText">Studio</label>
+          <input type="text" id="anime-studio"/>
         </div>
       </fieldset>
       <input class="action" type="submit" id="enregistrer" value="Enregistrer"/>
     </form>
-    <a href="#" class="action">Annuler et revenir &agrave; la liste</a>
+    <a class="neonText" href="#" class="action">Annuler et revenir sur la liste</a>
   </div>
   </script>
 
   <script type="plain/text" id="html-vue-liste-anime">
   <div class="page">
-    <h1> Liste d'animé </h1>
+     <h1 class="neonText"> Liste d'animés </h1>
     <ul id="liste-anime">
-      <li><a href="#anime/{Anime.id}" class="liste-anime-item">{Anime.nom}</a></li>
+      <li><a class="neonText" href="#anime/{Anime.id}" class="liste-anime-item">{Anime.titre}</a></li>
     </ul>
-    <a class="action" href="#ajouter-anime">Ajouter un animé</a>
+    <br><br>  
+    <a class="neonText" href="#ajouter-anime">Ajouter un animé</a>
   </div>
   </script>
+
+  
 
 </body>
 </html>

@@ -1,4 +1,4 @@
-﻿class CadeauDAO{
+﻿class AnimeDAO{
   lister(action){
     fetch("https://pji4gfywn9.execute-api.us-east-1.amazonaws.com/default/lister", {mode:'cors'})
       .then(response => response.json())
@@ -12,7 +12,6 @@
                                     data[position].genre,
                                     data[position].id,
                                     data[position].studio);
-
             console.log(anime);
             listeAnime.push(anime);
           }
@@ -20,7 +19,7 @@
         });
   }
   chercher(id, action){
-    fetch("https://lzkppvwgh4.execute-api.us-east-1.amazonaws.com/default/chercher-par-id?id=" + '?id=' + id , {mode:'cors'})
+    fetch("https://lzkppvwgh4.execute-api.us-east-1.amazonaws.com/default/chercher-par-id?id=" + id , {mode:'cors'})
       .then(response => response.json())
       .then(data =>
         {

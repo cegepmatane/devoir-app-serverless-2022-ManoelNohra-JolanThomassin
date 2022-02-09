@@ -1,10 +1,10 @@
-﻿class VueCadeau{
+﻿class VueAnime{
   constructor(){
     this.html = document.getElementById("html-vue-anime").innerHTML;
     this.anime = null;
   }
 
-  initialiserCadeau(anime){
+  initialiserAnime(anime){
     this.anime = anime;
   }
 

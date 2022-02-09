@@ -1,17 +1,17 @@
-﻿class Application {
-  constructor(window, vueListeCadeau, vueCadeau, vueAjouterCadeau, cadeauDAO){
+﻿﻿class Application {
+  constructor(window, vueListeAnime, vueAnime, vueAjouterAnime, AnimeDAO){
 
     this.window = window;
 
-    this.vueListeCadeau = vueListeCadeau;
+    this.vueListeAnime = vueListeAnime;
 
-    this.vueCadeau = vueCadeau;
+    this.vueAnime = vueAnime;
 
-    this.vueAjouterCadeau = vueAjouterCadeau;
-    // C'est l'équivalent de function(cadeau){this.ajouterCadeau(cadeau)}
-    this.vueAjouterCadeau.initialiserAjouterCadeau(cadeau =>this.ajouterCadeau(cadeau));
+    this.vueAjouterAnime = vueAjouterAnime;
 
-    this.cadeauDAO = cadeauDAO;
+    this.vueAjouterAnime.initialiserAjouterAnime(anime =>this.ajouterAnime(anime));
+
+    this.AnimeDAO = AnimeDAO;
 
     // C'est l'équivalent de function(){this.naviguer()}
     this.window.addEventListener("hashchange", () =>this.naviguer());
@@ -24,42 +24,41 @@
 
     if(!hash){
 
-      this.cadeauDAO.lister((listeCadeau) => this.afficherNouvelleListeCadeau(listeCadeau));
+      this.AnimeDAO.lister((listeAnime) => this.afficherNouvelleListeAnime(listeAnime));
 
-    }else if(hash.match(/^#ajouter-cadeau/)){
+    }else if(hash.match(/^#ajouter-anime/)){
 
-      this.vueAjouterCadeau.afficher();
+      this.vueAjouterAnime.afficher();
 
     }else{
 
-      let navigation = hash.match(/^#cadeau\/([0-9]+)/);
-      let idCadeau = navigation[1];
+      let navigation = hash.match(/^#anime\/([0-9]+)/);
+      let idAnime = navigation[1];
 
-      this.cadeauDAO.chercher(idCadeau, (cadeau) => this.afficherNouveauCadeau(cadeau));
+      this.AnimeDAO.chercher(idAnime, (anime) => this.afficherNouveauAnime(anime));
     }
   }
 
-  afficherNouvelleListeCadeau(listeCadeau){
+  afficherNouvelleListeAnime(listeAnime){
 
-    console.log(listeCadeau);
-    this.vueListeCadeau.initialiserListeCadeau(listeCadeau);
-    this.vueListeCadeau.afficher();
+    console.log(listeAnime);
+    this.vueListeAnime.initialiserListeAnime(listeAnime);
+    this.vueListeAnime.afficher();
   }
 
-  afficherNouveauCadeau(cadeau){
-    console.log(cadeau);
-    this.vueCadeau.initialiserCadeau(cadeau);
-    this.vueCadeau.afficher();
+  afficherNouveauAnime(anime){
+    console.log(anime);
+    this.vueAnime.initialiserAnime(anime);
+    this.vueAnime.afficher();
   }
 
-  ajouterCadeau(cadeau){
-    this.cadeauDAO.ajouter(cadeau, () => this.afficherListeCadeau());
+  ajouterAnime(anime){
+    this.AnimeDAO.ajouter(anime, () => this.afficherListeAnime());
   }
 
-  afficherListeCadeau(){
+  afficherListeAnime(){
     this.window.location.hash = "#";
   }
 }
 
-new Application(window, new VueListeCadeau(), new VueCadeau(), new VueAjouterCadeau(), new CadeauDAO());
-
+new Application(window, new VueListeAnime(), new VueAnime(), new VueAjouterAnime(), new AnimeDAO());
