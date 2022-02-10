@@ -3,10 +3,10 @@
 # Api Gateaway 
 ## Chercher par id
 Manoël :
-https://lzkppvwgh4.execute-api.us-east-1.amazonaws.com/default/chercher-par-id?
+https://lzkppvwgh4.execute-api.us-east-1.amazonaws.com/default/chercher-par-id?id=1
 
 Jolan :
-https://hhqfkxpci7.execute-api.us-east-1.amazonaws.com/default/chercher-par-id?id=
+https://hhqfkxpci7.execute-api.us-east-1.amazonaws.com/default/chercher-par-id?id=1
 
 ## Ajouter
 Manoël :
