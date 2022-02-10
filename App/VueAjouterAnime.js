@@ -21,7 +21,7 @@
     let genre = document.getElementById("anime-genre").value;
     let studio = document.getElementById("anime-studio").value;
 
-    this.ajouterAnime(new Anime(titre, annee, genre, null, studio,));
+    this.ajouterAnime(new Anime(titre, annee, genre, null, studio));
 
   }
 
