@@ -1,5 +1,12 @@
 # Manoël Nohra et Jolan Thomassin
 
+# URL 
+## Jolan
+http://3.208.129.152/  
+
+## Manoël
+http://54.92.236.140/
+
 # Api Gateaway 
 ## Chercher par id
 Manoël :
